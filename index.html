@@ -73,6 +73,45 @@
         <a href="" class="hero__button">Заказать услугу</a>
       </section>
 
+      <!-- Модальное окно -->
+      <form class="backdrop">
+        <div class="modal">
+          <button class="modal__close"></button>
+
+          <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+        
+        <ul class="modal__list">
+          <li class="modal__item">
+            <label for="text" class="modal__label">Имя</label>
+            <input type="text" id="text" class="modal__input">
+          </li>
+
+          <li class="modal__item">
+            <label for="tel" class="modal__label">Телефон</label>
+            <input type="tel" id="tel" class="modal__input">
+          </li>
+
+          <li class="modal__item">
+            <label for="email" class="modal__label">Почта</label>
+            <input type="email" name="email" id="email" class="modal__input">
+          </li>
+
+          <li class="modal__item">
+            <label for="comment" class="modal__label">Коментарий</label>
+            <textarea name="comment" id="comment" class="modal__comment"></textarea>
+          </li class="modal__item">
+
+          <li>
+            <input type="checkbox" name="policy" id="policy" class="modal__policy">
+            <label for="policy" class="modal__accept">Соглашаюсь с рассылкой и принимаю 
+              <a href="" class="modal__item--link">Условия договора</a>
+            </label>
+          </li>
+        </ul>
+        <button class="modal__button">Отправить</button>
+        </div>
+      </form>
+
       <!-- Принципы -->
       <section class="container">
         <h2 class="principles">Принципы</h2>
@@ -460,5 +499,27 @@
       </div>
       <p class="rights">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
+
   </body>
 </html>
