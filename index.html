@@ -85,30 +85,46 @@
             
             <input type="text" id="name" class="modal__input" placeholder=" ">
             <label for="name" class="modal__label">Имя</label>
+            
+              <svg class="modal__icon">
+                <use href="./images/modal-icons.svg#person"></use>
+              </svg>
+            
           </li>
 
           <li class="modal__item">
            
             <input type="tel" id="tel" class="modal__input" placeholder=" ">
              <label for="tel" class="modal__label">Телефон</label>
+               <svg class="modal__icon">
+                <use href="./images/modal-icons.svg#phone"></use>
+              </svg>
           </li>
 
           <li class="modal__item">
             
             <input type="email" name="email" id="email" class="modal__input" placeholder=" ">
             <label for="email" class="modal__label">Почта</label>
+              <svg class="modal__icon">
+                <use href="./images/modal-icons.svg#email"></use>
+              </svg>
           </li>
 
           <li class="modal__item">
-            <label for="comment" class="modal__label">Коментарий</label>
-            <textarea name="comment" id="comment" class="modal__comment" placeholder=" "></textarea>
-          </li class="modal__item">
+            
+            <textarea name="comment" id="comment" class=" modal__comment" placeholder=" "></textarea>
+            <label for="comment" class="modal__comment-label">Коментарий</label>
+          </li>
 
-          <li>
-            <input type="checkbox" name="policy" id="policy" class="modal__policy">
-            <label for="policy" class="modal__accept">Соглашаюсь с рассылкой и принимаю 
+          <li class="modal__item">
+            <label class="modal__accept">
+              
+              <input type="checkbox" name="policy" class="modal__policy">
+              <span class="modal__policy-icon"></span>
+            Соглашаюсь с рассылкой и принимаю 
               <a href="" class="modal__item--link">Условия договора</a>
             </label>
+            
           </li>
         </ul>
         <button class="modal__button">Отправить</button>
